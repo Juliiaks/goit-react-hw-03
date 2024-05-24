@@ -13,15 +13,21 @@ function App() {
     setFilter(evt.target.value)
   }
 
-  const addContact = {newContact } => {
-    
+  const addContact = (newContact)  => {
+    setContacts((prevContacts) => {
+return[...prevContacts, newContact]
+    }
+
+    )
  }
 const visibleContacts = contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase()))
 
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm/>
+      <ContactForm
+      onAdd={addContact}
+      />
       <SearchBox
         filter={filter}
         handleChange={handleChange}
