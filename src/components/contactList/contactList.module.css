@@ -1,0 +1,15 @@
+.list{
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.listItem{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
